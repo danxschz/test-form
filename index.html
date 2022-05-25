@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <title>Test Form</title>
+</head>
+
+<body>
+  <h1>Test form</h1>
+  <form novalidate>
+    <div class="inputs">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <span class="error" aria-live="polite"></span>
+
+      <label for="country">Country</label>
+      <input type="text" id="country" pattern="^[a-zA-Z]+$">
+      <span class="error" aria-live="polite"></span>
+
+      <label for="zip">Zip code</label>
+      <input type="text" id="zip" pattern="^[0-9]{5}([- /]?[0-9]{4})?$">
+      <span class="error" aria-live="polite"></span>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+      <span class="error" aria-live="polite"></span>
+
+      <label for="password-confirm">Password confirmation</label>
+      <input type="password" id="password-confirm" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+      <span class="error" aria-live="polite"></span>
+    </div>
+
+    <button type="button">Submit</button>
+  </form>
+  <div class="result"></div>
+</body>
+
+</html>

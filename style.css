@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 2vh 4vw;
+}
+
+form {
+  display: grid;
+  justify-items: start;
+  gap: 2vh;
+}
+
+.inputs {
+  display: grid;
+  gap: 1vh;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  max-width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
