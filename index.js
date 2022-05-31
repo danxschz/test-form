@@ -74,7 +74,7 @@ function passwordShowError() {
   } else if (password.validity.patternMismatch) {
     passwordError.textContent = 'Password must contain a minimum of eight characters, at least one letter, one number and one special character:';
   }
-
+  
   passwordError.className = 'error active';
 }
 
